@@ -132,6 +132,25 @@ nav a:hover { color: #04416c; }
     height: 40px;
   }
 }
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
 
 footer {
   background:#222; color: #fff; text-align:center; font-size:.95em; padding: 1.7em 1em;
@@ -146,4 +165,10 @@ footer {
   nav ul { gap: 0.9em;}
   .gallery-grid img { width:95vw; max-width:270px;}
 }
+@media (max-width: 900px) {
+  .social-icons {
+    margin-right: 10px;
+  }
+}
+
 
