@@ -60,6 +60,29 @@ nav a:hover { color: #04416c; }
 .inquiry-form button {
   background:#04416c; color:#fff; border:none; border-radius:5px; padding:1em; font-size:1em; cursor:pointer;
 }
+.whatsapp-float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.whatsapp-float:hover {
+  background-color: #128c4a;
+}
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
 footer {
   background:#222; color: #fff; text-align:center; font-size:.95em; padding: 1.7em 1em;
   margin-top:2em;
