@@ -32,3 +32,27 @@ if (inquiryForm) {
     this.reset();
   });
 }
+// Hero Slider Functionality
+const slides = document.querySelectorAll('.hero-slider .slide');
+const prevBtn = document.querySelector('.hero-slider .prev');
+const nextBtn = document.querySelector('.hero-slider .next');
+let current = 0, autoSlide;
+
+function showSlide(idx) {
+  slides.forEach((img, i) => img.classList.toggle('active', i===idx));
+}
+function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+function prevSlide() {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+}
+// Button events
+nextBtn.addEventListener('click', () => { nextSlide(); restartSlider(); });
+prevBtn.addEventListener('click', () => { prevSlide(); restartSlider(); });
+// Auto slide
+function startSlider() { autoSlide = setInterval(nextSlide, 3500); }
+function restartSlider() { clearInterval(autoSlide); startSlider(); }
+showSlide(current); startSlider();
